@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  margin-top: 20px;
+  width: 400px;
+  height: 300px;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+
+img {
+  margin-left: 80px;
+  width: 150px;
+  z-index: 1;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  margin-right: 10px;
+}
+
+#pokeball-bg {
+  position: absolute;
+  margin-left: 120px;
+  width: 220px;
+}
+
+.card-electric {
+  background-color: yellow;
+}
+
+.card-fire {
+  background-color: orangered;
+}
+
+.card-fairy {
+  background-color: pink;
+}
+
+.card-grass {
+  background-color: rgb(102, 194, 102);
+}
+
