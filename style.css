@@ -84,3 +84,15 @@ img {
   background-color: aquamarine;
 }
 
+@media (max-width: 767px) {
+  #card {
+    width: 98vw;
+  }
+  #pokeball-bg {
+    position: absolute;
+    margin-left: 150px;
+    width: 220px;
+  }
+  
+}
+
