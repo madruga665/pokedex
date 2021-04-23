@@ -8,6 +8,15 @@ body {
   font-family: sans-serif;
 }
 
+header, footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  width: 100vw;
+  height: 8vh;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -20,16 +29,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 10px 20px;
   margin-top: 20px;
-  width: 400px;
+  width: 500px;
   height: 300px;
   border: 5px solid black;
   border-radius: 20px;
 }
 
 img {
-  margin-left: 80px;
   width: 150px;
   z-index: 1;
 }
@@ -52,7 +60,7 @@ img {
 
 #pokeball-bg {
   position: absolute;
-  margin-left: 120px;
+  margin-left: 160px;
   width: 220px;
 }
 
@@ -70,5 +78,9 @@ img {
 
 .card-grass {
   background-color: rgb(102, 194, 102);
+}
+
+.card-water {
+  background-color: aquamarine;
 }
 

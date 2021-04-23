@@ -7,8 +7,6 @@ const fetchPokemon = async (pokemonName) => {
     return appendPokemon(data);
   } catch (error) {
     console.log(`Deu Ruim: ${error}`);
-
-    card.appendChild(msg);
   }
 };
 
@@ -57,7 +55,15 @@ const backgroundCondition = (pokemon) => {
   if (pokemon.types[0].type.name === "grass") {
     card.classList.toggle("card-grass");
   }
+
+  if (pokemon.types[0].type.name === "water") {
+    card.classList.toggle("card-water");
+  }
 };
+
+const capitalize = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 const appendPokemon = (pokemon) => {
   const img = document.createElement("img");
@@ -69,9 +75,9 @@ const appendPokemon = (pokemon) => {
 
   // img.src = `https://projectpokemon.org/images/normal-sprite/${pokemon.name}.gif`
   img.src = pokemon.sprites.other.dream_world.front_default;
-  id.innerHTML = `Id: ${pokemon.id}`;
-  name.innerHTML = `Nome: ${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`;
-  type.innerHTML = `Tipo: ${pokemon.types[0].type.name}`;
+  id.innerHTML = `ID: ${pokemon.id}`;
+  name.innerHTML = `Nome: ${capitalize(pokemon.name)}`;
+  type.innerHTML = `Tipo: ${capitalize(pokemon.types[0].type.name)}`;
 
   backgroundCondition(pokemon);
 
